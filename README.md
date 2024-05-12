@@ -22,4 +22,5 @@ FoodMart is part of a concept that uses Blockchain Technology and Sustainable Sy
 - Vyper and OPStack
 - JavaScript, Web3.js, React.js, Node.js
 - CSS and Html
+
 Built by [Foodware Logistics Technologies](https://linktr.ee/foodware_labs)
