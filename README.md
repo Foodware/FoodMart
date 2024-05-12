@@ -17,7 +17,7 @@ FoodMart is a Super App that allows Users and Vendors to:
 - Crowd Buy & Bulk Sell Non-Perishable Food Products through a DAO-like Crowfund Contract and Logistics System - **Foodwish Crowdfund**
 - Enjoy a Light Speed Delivery System built on a DePIN Network of Riders & Courier Services - **FoodSharp**
 
-FoodMart is part of a concept that usees Blockchain technology and Sustainable systems to create Decentralized Protocols that ensure food Security for the everyday Human - *FoodFi*
+FoodMart is part of a concept that uses Blockchain Technology and Sustainable Systems to create Decentralized Protocols that ensure Food Security for the Everyday Human - _**FoodFi**_
 ## Languages and Libraries 
 - Vyper and OPStack
 - JavaScript, Web3.js, React.js, Node.js
