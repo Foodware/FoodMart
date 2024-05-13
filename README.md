@@ -19,8 +19,8 @@ FoodMart is a Super App that allows Users and Vendors to:
 
 FoodMart is part of a concept that uses Blockchain Technology and Sustainable Systems to create Decentralized Protocols that ensure Food Security for the Everyday Human - _**FoodFi**_
 ## Languages and Libraries 
-- Vyper and OPStack
-- JavaScript, Web3.js, React.js, Node.js
+- Vyper, Solidity, and OPStack
+- JavaScript, Web3.js, React.js, and Node.js
 - CSS and Html
 
 Built by [Foodware Logistics Technologies](https://linktr.ee/foodware_labs)
