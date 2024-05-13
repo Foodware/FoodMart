@@ -1,5 +1,5 @@
 export default function Tracker() {
     return <>
-        <div>Tracker</div>
+        <div>Tracker page</div>
     </>
 }
