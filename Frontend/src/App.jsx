@@ -5,6 +5,8 @@ import LogoPage from "./components/LogoPage.jsx";
 import SignUpPage from "./components/SignUpPage.jsx";
 import SignInPage from "./components/SignInPage.jsx";
 import FirstPage from "./components/FirstPage.jsx"
+import Wallet from "./pages/Wallet.jsx"
+import Tracker from "./pages/Tracker.jsx"
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -39,6 +41,9 @@ function App() {
               <Route path="/" element={<SignUpPage />} />
             )}
             <Route path="/signin" element={<SignInPage />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/tracker" element={<Tracker />} />
+
           </Routes>
 
         )}

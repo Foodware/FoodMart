@@ -4,6 +4,8 @@ import cartIcon from "../assets/icons/cart.svg"
 import menuIcon from "../assets/icons/menu.svg"
 import messagingIcon from "../assets/icons/messaging.svg"
 
+import { Link } from "react-router-dom"
+
 const handleClick = function (e, value) {
     console.log(value)
 }
@@ -31,11 +33,11 @@ export default function FirstPage() {
                     <label htmlFor="email" className="labelWithRoundedCorner">
                         {/* <img className="signInIcons" src={emailIcon} alt="" />{" "} */}
                         <input
-                            type="email"
-                            name="email"
-                            id="email"
+                            type="search"
+                            name="search"
+                            id="search"
                             placeholder="Search Here"
-                            required
+
                         />
                     </label>
                 </div>
@@ -49,11 +51,17 @@ export default function FirstPage() {
                 {dataList}
             </section>
             <footer className="firstpagenavbar fixed bottom-0 left-0 w-full bg-white h-[5rem] flex items-center justify-center gap-9">
-                <div className="flex flex-col justify-center items-center">
-                    <span className="icon">icon</span><span>Market</span>
-                </div>
-                <div className="flex flex-col justify-center items-center"><span className="icon">icon</span><span>Wallet</span></div>
-                <div className="flex flex-col justify-center items-center"><span className="icon">icon</span><span>Tracker</span></div>
+                <Link to={'/'}>
+                    <div className="flex flex-col justify-center items-center">
+                        <span className="icon">icon</span><span>Market</span>
+                    </div>
+                </Link>
+                <Link to={"/wallet"}>
+                    <div className="flex flex-col justify-center items-center"><span className="icon">icon</span><span>Wallet</span></div>
+                </Link>
+                <Link to={"/tracker"}>
+                    <div className="flex flex-col justify-center items-center"><span className="icon">icon</span><span>Tracker</span></div>
+                </Link>
             </footer>
         </>
     )
