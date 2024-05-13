@@ -4,9 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LogoPage from "./components/LogoPage.jsx";
 import SignUpPage from "./components/SignUpPage.jsx";
 import SignInPage from "./components/SignInPage.jsx";
+import FirstPage from "./components/FirstPage.jsx"
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,14 +18,50 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const storedLoginStatus = localStorage.getItem('isLoggedIn');
+    setIsLoggedIn(storedLoginStatus === 'true');
+  }, []);
+
+  console.log(showSignUp);
   return (
     <>
-      <div className="App w-full h-full">
-        {showSignUp ? <SignUpPage /> : <LogoPage />}
-        {/* <SignUpPage /> */}
-      </div>
+      <BrowserRouter>
+        {/*{!showSignUp ? (
+          <Routes>
+            <Route index element={<LogoPage />} />
+          </Routes>
+        ) :( */}
+        <Routes>
+          {isLoggedIn ? (
+            <Route path="/" element={<FirstPage />} />
+          ) : (
+            <Route path="/" element={<SignUpPage />} />
+          )}
+          <Route path="/signin" element={<SignInPage />} />
+        </Routes>
+
+        {/* )} */}
+      </BrowserRouter>
     </>
   );
 }
 
 export default App;
+/**
+ * <BrowserRouter>
+        {!showSignUp ? (
+          <Route path="/" element={<LogoPage />} />
+        ) : (
+          <Routes>
+            //Conditional rendering based on authentication status 
+            {isLoggedIn ? (
+              <Route path="/" element={<FirstPage />} />
+            ) : (
+              <Route path="/" element={<SignUpPage />} />
+            )}
+            <Route path="/signin" element={<SignInPage />} />
+          </Routes>
+        )}
+      </BrowserRouter>
+ */

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import googleLogo from "../assets/brands/Google.svg";
 import facebookLogo from "../assets/brands/Facebook.svg";
 import twitterLogo from "../assets/brands/twitter.svg";
@@ -6,6 +8,8 @@ import appleLogo from "../assets/brands/apple.svg";
 import fullNameIcon from "../assets/icons/fullNameIcon.png";
 import emailIcon from "../assets/icons/emailIcon.png";
 import passwordIcon from "../assets/icons/passwordIcon.png";
+
+
 export default function SignUpPage() {
   return (
     <>
@@ -46,7 +50,7 @@ export default function SignUpPage() {
           </label>
           <label htmlFor="acceptTerms" className="justify-start">
             <input type="checkbox" name="acceptTerms" id="acceptTerms" />{" "}
-            <span>Accept terms & conditions</span>
+            <span className="text-[var(--primary-color)]">Accept terms & conditions</span>
           </label>
           <button
             type="submit"
@@ -62,7 +66,7 @@ export default function SignUpPage() {
           </span>
         </div>
 
-        <div className="services flex items-center justify-around w-full mt-auto mb-3">
+        <div className="services flex items-center justify-around w-full mt-auto mb-3 gap-2">
           <div className="google rounded-3xl px-3 py-2">
             <img src={googleLogo} alt="Google Logo" /> <span>Google</span>
           </div>
@@ -81,12 +85,15 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <section>
+        <section className="text-center mt-6">
           <span>
             Already have account with us?{" "}
-            <a href="/" className="text-[var(--primary-color)] font-bold">
+            {/* <a href="/" className="text-[var(--primary-color)] font-bold">
               Sign In
-            </a>
+            </a> */}
+            <Link to={"/signin"} className="text-[var(--primary-color)] font-bold">
+              Sign In
+            </Link>
           </span>
         </section>
       </main>
