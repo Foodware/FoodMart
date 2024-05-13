@@ -27,21 +27,21 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/*{!showSignUp ? (
+        {!showSignUp ? (
           <Routes>
             <Route index element={<LogoPage />} />
           </Routes>
-        ) :( */}
-        <Routes>
-          {isLoggedIn ? (
-            <Route path="/" element={<FirstPage />} />
-          ) : (
-            <Route path="/" element={<SignUpPage />} />
-          )}
-          <Route path="/signin" element={<SignInPage />} />
-        </Routes>
+        ) : (
+          <Routes>
+            {isLoggedIn ? (
+              <Route path="/" element={<FirstPage />} />
+            ) : (
+              <Route path="/" element={<SignUpPage />} />
+            )}
+            <Route path="/signin" element={<SignInPage />} />
+          </Routes>
 
-        {/* )} */}
+        )}
       </BrowserRouter>
     </>
   );
