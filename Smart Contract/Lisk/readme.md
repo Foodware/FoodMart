@@ -12,4 +12,4 @@ The Expiry Datevis *Bloock Number* - **6923000** (40 days from 14th May 2024)
 
 The smart contract is written in Vyper and Solidity. They have their respective .abi and .bin files.
 
-There are No funds in the Contract 
+The Contract will delivery 0.09 Ether to the receiver, and 0.01 Ether to the admin after claim date if either the receiver or sender are authorised by the admin, and they call the escrow claim function.
